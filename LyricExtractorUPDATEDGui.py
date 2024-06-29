@@ -101,10 +101,6 @@ class LyricGUI:
         # If there are lyrics present in the GUI, then the user can't enter in another song because generate_lyrics_counter = 2
             while self.generate_lyrics_counter < 2:
                 self.song = self.genius.search_song(self.song_choice.get(), self.artist_choice.get())
-
-                # I need to figure out how to remove the annoying numbers at the end of the lyrics.
-                # IDK HOW TO DO THIS YET THOUGH!
-                
                 self.song_lyrics = customtkinter.CTkLabel(self.main_frame, 
                                             # Gets rid of the unnecessary strings in the beginning of the lyrics and gets rid of the annoying "Embed" string at the end
                                             text=self.song.lyrics.replace('[', '\n[').replace(self.song.lyrics[0:self.song.lyrics.index('[')], '').replace('Embed', ''), 
