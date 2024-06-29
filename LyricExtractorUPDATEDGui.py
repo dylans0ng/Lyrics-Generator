@@ -118,7 +118,6 @@ class LyricGUI:
            self.generate_lyrics_counter = 1 # Resets the lyric counter to 1 so the user can print out another song
 
     def show_youtube_lyrics(self):
-        # while self.youtube_lyrics_counter < 2: 
         self.song_choice_words = self.song_choice.get().split() 
         self.artist_choice_words = self.artist_choice.get().split()
 
